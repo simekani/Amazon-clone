@@ -1,12 +1,12 @@
-import './App.css';
-import React from "react"; 
+import "./App.css";
+import React from "react";
+import Header from "./Header.js";
 
 function App() {
   return (
-    // BEM naming convenstion 
+    // BEM naming convenstion
     <div className="App">
-      <h1>Hello clever programmers lets build the amazon store</h1>
-      {/* header */}
+      <Header />
       {/* Home */}
     </div>
   );
