@@ -23,7 +23,7 @@
 }
 .header_searchIcon {
   padding: 5px;
-  height: 15px;
+  height: 22px !important;
   background-color: #cd9042;
 }
 
@@ -52,4 +52,15 @@
 .header_optionLineTwo {
   font-size: 13px;
   font-weight: 800;
+}
+
+.nav_basket {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.header_basketCount {
+  margin-right: 10px;
+  margin-left: 10px;
 }
