@@ -16,17 +16,20 @@ function Header() {
           src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
         />
       </Link>
- 
+
       <div className="header_searchBar">
         <input className="header_searchInput" type="=text" />{" "}
         <SearchIcon className="header_searchIcon" />
       </div>
 
       <div className="header_nav">
-        <div className="nav_option ">
-          <span className="header_optionLineOne">Hi Guest</span>
-          <span className="header_optionLineTwo">Sign in</span>
-        </div>
+        <Link to="/Login">
+          <div className="nav_option ">
+            <span className="header_optionLineOne">Hi Guest</span>
+            <span className="header_optionLineTwo">Sign in</span>
+          </div>
+        </Link>
+
         <div className="nav_option ">
           <span className="header_optionLineOne">Returns</span>
           <span className="header_optionLineTwo">&Orders</span>
