@@ -1,5 +1,6 @@
 export const initialState = {
   basket: [],
+  user: null,
 };
 
 // Selector to tally up the basket
@@ -35,6 +36,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         basket: newBasket,
+      };
+
+    case "Set_User":
+      return {
+        ...state,
+        user: action.user,
       };
 
     default:

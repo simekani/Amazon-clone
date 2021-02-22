@@ -3,9 +3,10 @@ import "./Checkout.css";
 import CheckoutProduct from "./CheckoutProduct";
 import Subtotal from "./Subtotal.js";
 import { useStateValue } from "./StateProvider.js";
+import { auth, db } from "./firebase";
 
 function Checkout() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
 
   return (
     <div className="checkout">
@@ -15,14 +16,11 @@ function Checkout() {
           alt=""
           className="checkoutAdvert"
         />
+        <h3 className="displayName">
+          {user ? "Hi, " + user.email : "Sign in to checkout"}
+        </h3>
         <h2 className="checkout_title">Your Shopping basket</h2>
-        <CheckoutProduct
-          id="49538094"
-          title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
-          price={239.0}
-          rating={4}
-          image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
-        />
+
         {basket.map((item) => (
           <CheckoutProduct
             id={item.id}
