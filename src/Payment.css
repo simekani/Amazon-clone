@@ -23,6 +23,7 @@
 }
 
 .payment_address,
+.payment_details,
 .payment_items {
   flex: 0.8;
 }
