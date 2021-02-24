@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import React, {useEffect }from "react";
 import Header from "./Header.js";
 import Home from "./Home.js";
 import Checkout from "./Checkout.js";
@@ -7,7 +7,7 @@ import Login from "./Login.js";
 import { auth } from "./firebase";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useStateValue } from "./StateProvider.js";
-import Payment from "./Payment.js";
+
 function App() {
   const [{}, dispatch] = useStateValue();
 
@@ -36,11 +36,6 @@ function App() {
           <Route path="/checkout">
             <Header />
             <Checkout />
-          </Route>
-
-          <Route path="/payment">
-            <Header />
-            <Payment />
           </Route>
           {/* 
     default router always at the bottom  */}
